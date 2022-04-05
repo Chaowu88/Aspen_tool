@@ -365,7 +365,7 @@ def make_dir(directory):
 		os.makedirs(directory, exist_ok = True)
 	
 	except FileNotFoundError:
-		directory = directory[:220]
+		directory = directory[:220].strip()
 		os.makedirs(directory, exist_ok = True)
 		
 	finally:
